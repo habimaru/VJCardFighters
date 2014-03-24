@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="vj.rebirth.app.VJCardFighters">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/frameLayout2">
+
+        <FrameLayout
+            android:layout_width="186dp"
+            android:layout_height="162dp"
+            android:layout_gravity="left|center_vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="173dp"
+                android:id="@+id/imagenJugador"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/habimaru" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cartaJ0"
+                android:layout_gravity="right|top"
+                android:src="@drawable/electrico"
+                android:onClick="carta0" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cartaJ1"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/electrico"
+                android:onClick="carta1" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cartaJ2"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/electrico"
+                android:onClick="carta2" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="186dp"
+            android:layout_height="162dp"
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/frameLayout">
+
+            <ImageView
+                android:layout_width="151dp"
+                android:layout_height="173dp"
+                android:id="@+id/imagenOponente"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/flan" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cartaO0"
+                android:layout_gravity="left|top"
+                android:src="@drawable/electrico" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cartaO1"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/electrico" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/cartaO2"
+                android:layout_gravity="left|bottom"
+                android:src="@drawable/electrico" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="202dp"
+            android:layout_height="57dp"
+            android:layout_gravity="left|top">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Habimaru"
+                android:id="@+id/nombreJugador"
+                android:layout_gravity="center_horizontal|top"
+                android:textColor="#ff0338" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:id="@+id/hpJug"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:progress="100" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="202dp"
+            android:layout_height="57dp"
+            android:layout_gravity="right|top"
+            android:id="@+id/frameLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Flan"
+                android:id="@+id/nombreOponente"
+                android:layout_gravity="center_horizontal|top"
+                android:textColor="#5606ff" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:id="@+id/hpOpo"
+                android:layout_gravity="center"
+                android:indeterminate="false"
+                android:progress="100" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/taunt"
+            android:layout_gravity="center_horizontal|bottom"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/fraseJug"
+            android:layout_gravity="left|bottom"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/fraseOpo"
+            android:layout_gravity="right|bottom"
+            android:textSize="13dp" />
+
+        <FrameLayout
+            android:layout_width="111dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/cartaJug"
+                android:layout_gravity="left|top"
+                android:paddingRight="10dp" />
+
+            <ImageView
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:id="@+id/cartaOpo"
+                android:layout_gravity="right|bottom"
+                android:paddingLeft="10dp" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/AD"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>
+
+</RelativeLayout>
